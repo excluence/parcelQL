@@ -64,6 +64,11 @@ export class QueryBuilder
                 'query does not contains valid action'
             );
         }
+        if (!this.query.table) {
+            throw new ParcelQLValidationError(
+                `table is required in the query.`
+            );
+        }
     }
 
     protected _beforeBuild(knex: Knex<any, any[]>): void {
