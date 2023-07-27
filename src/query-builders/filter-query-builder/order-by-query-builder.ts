@@ -19,6 +19,11 @@ export class OrderByQueryBuilder
     }
 
     onInit(): void {
+        if (!Array.isArray(this.query.expressions)) {
+            throw new ParcelQLValidationError(
+                `order_by expressions must be an array`
+            );
+        }
         this.query.expressions.forEach((expr) => {
             if (expr.order && !orderByOrders.includes(expr.order)) {
                 throw new ParcelQLValidationError(
