@@ -1,12 +1,13 @@
 {
   "name": "parcelQL",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index",
   "types": "src/index.ts",
   "author": "Piyush Jaiswal",
   "license": "MIT",
   "private": false,
   "scripts": {
+    "prepublish": "tsc",
     "test": "mocha --watch",
     "build": "rimraf dist && tsc",
     "watch": "tsc --watch"
