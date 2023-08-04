@@ -3,7 +3,7 @@ export const comparisonOperators = [
     '>',
     '<',
     '>=',
-    '>=',
+    '<=',
     '<>',
     'IN',
     'NOT IN',
